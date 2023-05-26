@@ -1,14 +1,16 @@
 package main
 
 import (
+	"example/s3-bucket-manager/pkg/logger"
 	"example/s3-bucket-manager/pkg/setting"
-	"example/s3-bucket-manager/routers"
+	routers "example/s3-bucket-manager/router"
 	"log"
 	"net/http"
 )
 
 func init() {
 	setting.SetupEnv()
+	logger.InitLogger()
 }
 
 func main() {
